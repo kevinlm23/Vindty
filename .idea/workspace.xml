@@ -122,6 +122,7 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
+        <option value="ANDRES &lt;ossagamer1704@gmail.com&gt;" />
         <option value="Jaossa" />
         <option value="ANDRES" />
       </list>
@@ -554,6 +555,14 @@
       <option name="presentableId" value="Default" />
       <updated>1476200869573</updated>
     </task>
+    <task id="LOCAL-00001" summary="CREACION DEL MODELO Y REGISTRO DEL FORMULARIO DE VINDTY">
+      <created>1481673637976</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1481673637976</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
