@@ -1,13 +1,15 @@
 from django import forms
 from .models import*
 
-class CreateAnimalForm(forms.ModelForm):
-    model = Animals
-    fields = ["name",
-              "kingdom",
-              "height",
-              "intelligence",
-              "lifetime",
-              "weight",
-              "description"]
+class FormularioRegistro(forms.ModelForms):
+    model = RegistroVindty
+    fields = ["nombre",
+              "email",
+              "pais",
+              "telefono",
+              "ocupacion",
+              "tipo",
+              "descripcion",
+              "intereses"
+              ]
 

@@ -1,14 +1,19 @@
 from django.db import models
 
-class Animals(models.Model):
-    name = models.ChardField(max_length=100)
-    kingdom = models.ChardField(max_length=50)
-    height = models.FloatField()
-    intelligence = models.ChardField(max_length=200)
-    lifetime = models.FloatField()
-    weight = models.FloatField()
-    description = models.ChardField(max_lenght=500)
+TIPO_USUARIO_CHOICES = (
+    ('P', 'Persona'),
+    ('E', 'Empresa'),
+)
+
+class RegistroVindty(models.Model):
+    nombre = models.CharField(max_length=50)
+    email = models.EmailField()
+    pais = models.CharField(max_length=15)
+    telefono = models.IntegerField()
+    ocupacion = models.CharField(max_length=30)
+    tipo = models.CharField(max_length=1, choices=TIPO_USUARIO_CHOICES)
+    descripcion = models.TextField()
+    intereses = models.CharField(max_length=100)
 
     def __unicode__(self):
-        return self.name
-
+        return self.nombre
