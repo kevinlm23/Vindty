@@ -18,6 +18,5 @@ class CrearUsuario(CreateView):
 
     template_name = "form_registro.html"
 
-
-    def get_success_url(self):
-        return reverse("")
+def home(request):
+    return render(request,"home.html", {})
