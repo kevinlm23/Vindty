@@ -19,4 +19,4 @@ class CrearUsuario(CreateView):
     template_name = "form_registro.html"
 
 def home(request):
-    return render(request,"home.html", {})
+    return render(request,"index.html", {})
