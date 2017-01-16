@@ -14,16 +14,6 @@ import os
 from os.path import abspath, basename, dirname, join, normpath
 from sys import path
 
-DJANGO_ROOT = (dirname(abspath(__file__))) #dirname(
-
-# Absolute filesystem path to the top-level project folder:
-SITE_ROOT = dirname(DJANGO_ROOT)
-# Site name:
-SITE_NAME = basename(DJANGO_ROOT)
-# Add our project to our pythonpath, this way we don't need to type our project
-# name in our dotted import paths:
-path.append(DJANGO_ROOT)
-# END PATH CONFIGURATION
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -68,7 +58,7 @@ ROOT_URLCONF = 'Vindty.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [normpath(join(SITE_ROOT, 'src/templates'))],
+        'DIRS': [os.path.join(BASE_DIR, 'src/templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -117,6 +107,8 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/1.9/topics/i18n/
 
+CRISPY_TEMPLATE_PACK = 'bootstrap3'
+
 LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'
@@ -130,10 +122,11 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
-STATIC_ROOT = normpath(join(SITE_ROOT, 'assets'))
+#STATIC_ROOT = normpath(join(SITE_ROOT, 'static'))
 
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
-    normpath(join(SITE_ROOT, 'static')),
+    os.path.join(BASE_DIR, 'static'),
 )
+
